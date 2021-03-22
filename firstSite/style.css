@@ -252,21 +252,22 @@ footer p a {
     }
   }
 
-  @media screen and (max-width: 500px){
+  @media only screen and (max-width: 400px){
     
-    /*  .topnav #logo{
-        margin-left: 5px;
+    .musicWrap{
+        width: 100%;
+    }
+    
+    .musicPic img{
+        margin: 0 auto;
+        max-width: 90%;
+       
     }
 
-
-
-  .landingWrap{
-        position: absolute;
-        top: 70%;
-        left: 100px;
-        transform: translate(0%,-50%);
-        text-align: center;
-    }*/
+    .musicDiscription p{
+        margin: 0 auto;
+        max-width: 90%;
+    }
   }
 
 
