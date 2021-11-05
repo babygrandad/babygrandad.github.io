@@ -57,3 +57,9 @@ p{
     color: #b543ec;
     padding: 2px;
 }
+
+@media screen and (max-width: 600px) {
+  div {
+    max-width: 80%
+  }
+}
