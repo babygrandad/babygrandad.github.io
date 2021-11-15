@@ -1,0 +1,158 @@
+html , body ,h1{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main{
+    min-height: 100vh;
+    background: url(img/bkg.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.lhalf{
+    width: 50%;    
+    border: 2px solid grey;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.4),rgba(255,255,255,0.1));
+    backdrop-filter: blur(10px);
+}
+
+.rhalf{
+   display:flex;
+}
+
+.rhalf > *{
+    width: 50vw;
+    height: 100vh;
+}
+
+.rhalf .logo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.rhalf .logo-container .logo_blur {
+    width: 25vw;    
+    border: 2px solid grey;
+    height: 30vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.4),rgba(255,255,255,0.1));
+    backdrop-filter: blur(10px);
+}
+
+.rhalf form{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rhalf form p {
+    max-width: 400px;
+    color: #FA0004;
+}
+
+.logo-container{
+    height: 30%;
+    position: relative;
+}
+
+.logo-container img{
+    transform: scale(2);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+/* .lhalf input, .rhalf input, input[type="email"]? */
+input{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], 
+input[type="password"] {
+    border: solid 3px #00FA60;
+    border-radius: 10px;
+    background:white;
+    font-size: 1rem;
+    background: linear-gradient( to left, rgba(255,255,255,0.7),rgba(255,255,255,0.7));
+    color: #002E12;
+}
+
+.rhalf input[type="text"], .rhalf input[type="password"]{
+    border: solid 3px #0068FA;
+}
+
+
+input[type="button"], input[type="submit"]{
+    color: white;
+    border-radius: 1.1rem;
+    background: #00FA60;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-sizing: unset;
+    padding: 4px 2px;
+}
+
+input[type="button"]:hover{
+    cursor: pointer;
+}
+
+input[value="Sign up"]{
+    background: #0068FA;
+    margin-top: 40px;
+}
+
+form a {
+    color: #FA0004;
+    text-decoration: underline;
+    font-weight: bold;  
+}
+
+.message{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.message h1{
+    width: 25vw;    
+    border: 2px solid grey;
+    height: 30vh;
+    font-size: calc(3vw + 1rem);
+    color: #FA0004;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white; 
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.4),rgba(255,255,255,0.1));
+    backdrop-filter: blur(10px);
+}

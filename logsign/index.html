@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="lhalf">
+            <div class="logo-container">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <form id="log_in" onsubmit=" return logValidate()" action="logged.html">
+                <input id="luname" type="text" placeholder="Username">
+                <input id="lpass" type="password" Placeholder="Password">
+                <input type="submit" value="Log In" >
+                <a href="#">Forgot Password?</a>
+                <a href="signup.html"><input type="button" value="Sign up"></a>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
