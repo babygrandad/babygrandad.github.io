@@ -25,6 +25,16 @@ body{
 
 .comingSoon{
     color: var(--clr-gold);
+    font-size: 1.175rem;
+       
+}
+
+.disc{
+    font-size: 1rem;
+}
+
+.cont{
+    font-size: 0.75rem;
 }
 
 span{
