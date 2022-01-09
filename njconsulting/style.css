@@ -84,7 +84,7 @@ span{
     .sign{
         height: 100%;
         width: 90%;
-        background-image: url(/img/phonesign.jpg);
+        background-image: url(img/phonesign.jpg);
         border-radius: 20px;
         background-size: cover;
         background-position: center;
