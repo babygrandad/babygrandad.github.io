@@ -1,0 +1,20 @@
+header{
+    background-color: #C25EC1;
+}
+
+aside{
+    border-top:solid 2px white;
+    background-image: linear-gradient(to bottom, 
+    #c25ec1, #d55eb5, #e461aa, 
+    #f0679e, #f86f93, #fd7888, 
+    #ff827f, #ff8d77, #ff9b6e, 
+    #ffab66, #ffbc60, #ffce5e);
+}
+
+footer{
+    background-color: #ffce5e;
+}
+
+article{
+    border-top:solid 2px white;
+}

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: montserrat;
+    font-weight: 700;
+}
+
+a {
+    color: #fff;
+}
+
+span {
+    color: #c25ec1;
+}
+
+/* Global Classes */
+
+.center {
+    text-align: center;
+}
+
+.padding {
+    padding: 20px 30px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* *********************** */
+
+/* Header Sectoion */
+
+header {
+    background-color: #6d6875;
+    color: white;
+}
+
+img {
+    width: 12%;
+    border-radius: 100%;
+    border: 3px solid #fff;
+}
+
+.to-top {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: #cc9cc9;
+    color: fefae0;
+    text-align: center;
+    position: fixed;
+    right: 4%;
+    bottom: 4%;
+    box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Section */
+
+main {
+    display: flex;
+}
+
+/* Navigation Section */
+
+aside {
+    flex: 1;
+
+    background-color: #e5989b;
+    color: white;
+}
+
+.nav-item {
+    padding: 10px 0;
+}
+
+.nav-item:hover {
+    border-bottom: #fefae0 2px solid;
+    padding-bottom: 8px;
+}
+
+.nav-item:hover a {
+    color: #fefae0;
+}
+
+/* Article Section */
+
+article {
+    flex: 4;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    border-bottom: 2px solid #6d68750d;
+}
+
+section:nth-last-child(1) {
+    border: none;
+}
+
+/* Footer Section */
+
+footer {
+    background-color: #6d6875;
+    color: white;
+}
+
+.foot-list {
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
+.contact-item:hover {
+    position: relative;
+    bottom: 5px;
+}
+
+.contact-item:hover a {
+    color: #c300bf;
+}
+
+@media screen and (max-width: 570px){
+    main{
+        display: block;
+    }
+
+    .contact-item:hover {
+        position: static;
+    }
+}
