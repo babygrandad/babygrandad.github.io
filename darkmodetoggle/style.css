@@ -60,6 +60,6 @@ p{
 
 @media screen and (max-width: 600px) {
   div {
-    max-width: 80%
+    max-width: 80%;
   }
 }

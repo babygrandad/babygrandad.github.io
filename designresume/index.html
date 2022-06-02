@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top grey-background">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto" id="navi-links">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="art" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Art
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark grey-background" aria-labelledby="art">
+                <li class="nav-item"><a class="nav-link" href="#photography">Photography</a></li>
+                <li class="nav-item"><a class="nav-link" href="#videography">Videography</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact-me">Contact-Me</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="home" class="landing">
+        <div>
+          <h1>Relebogile Sean Nkotswe</h1>
+          <p>Web Developer | UI Designer | Photographer</p>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+  <main>
+    <section id="about" class="padding center-aligned">
+      <h2>About</h2>
+      <div class="row">
+        <div class="col-md-6 img-div position-relative">
+          <img id="profile-photo" src="images/profile/BB G-1 (2).jpg" alt="profile-photo">
+        </div>
+        <div class="col-md-6 left-aligned">
+          <p>This is "Relebogile Sean Nkotswe," also known as "Babygrandad." He is a Soweto-based web developer,
+            self-taught photographer, and videographer. He enjoys photographing portraits, monochrome, and nature. He
+            graduated from Boston City Campus & Business College with a Diploma in Systems Development. He makes YouTube
+            videos and enjoys colourful themes.</p>
+          <p>Fiddling with computers, coding, playing video games, watching anime, meeting new people, and taking a long
+            walk in the evening while listening to LO-FI music are just a few of BabyGrandad's hobbies. Oh, and he likes
+            a creamy cup of coffee or a juicy papaya.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="center-aligned grey-background">
+      <h2>Skills</h2>
+      <div id="skills-carousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#skills-carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#skills-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#skills-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#skills-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#skills-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <i class="fa-brands fa-html5 fa-10x d-block w100"></i>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>HTML</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <i class="fa-brands fa-css3 fa-10x d-block w100"></i>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>CSS</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <i class="fa-brands fa-js fa-10x d-block w100"></i>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>JavaScript</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <i class="fa-solid fa-camera fa-10x d-block w100"></i>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Photography</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <i class="fa-solid fa-video fa-10x d-block w100"></i>
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Videography</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#skills-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#skills-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="experience" class="center-aligned padding">
+      <h2>Work Experience</h2>
+      <div class="row experience-div left-aligned">
+        <div class="col-md-6">
+          <h4><span>IT Service Desk Analyst | </span>Hogan Lovells</h4>
+          <ul>
+            <li>Maintain a detailed understanding of all aspects of user account management in relation to the
+              employee life cycle including: AD accounts, Smart devices (iPhone /Android), secureID etc.</li>
+            <li>Handle Tier 1 service desk escalations through walk-ins, phone calls and emails.</li>
+            <li>Handle user queries, troubleshoot and log troubleshoot process and escalate to proper team if
+              neccesarry.</li>
+            <li>Undertake and assist with IT equipment moves in support of internal office moves and changes as may be
+              required.</li>
+            <li>Provide user support in programs susch as Elite 3e, DM16, InterAction, Office 365 etc.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4><span>IT Support | </span>Lawtons Africa</h4>
+          <ul>
+            <li>Handle Tier 1 & 2 help desk escalations through walk-ins, phone calls and emails.</li>
+            <li>Maintain a detailed understanding of all aspects of user account management in relation to the
+              employee life cycle including: AD accounts, Smart devices (iPhone /Android), secureID etc.</li>
+            <li>Undertake and assist with IT equipment moves in support of internal office moves and changes as may be
+              required.</li>
+            <li>Manage and Maintaining equipment inventory records via serial number, user and location to include:
+              PC/Laptop, Smart devices (iPhone /Android), telephones, monitors, printers and peripherals including
+              coordination and timely return of all leased equipment.</li>
+            <li>Configure, support and maintain PCs and other IT equipment as required.</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h4><span>Photographer's Assistant | </span>N I Z I.jpg</h4>
+          <ul>
+            <li>Assist with photography.</li>
+            <li>Organizing equipment and props needed for photoshoots.</li>
+            <li>Location scouting.</li>
+            <li>Photo editing.</li>
+            <li>Leasing with clients in preparation for photoshoots.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="center-aligned padding grey-background">
+      <h2>Education</h2>
+      <div class="row">
+        <div class="educatin-column col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header bg-secondary">
+              <i class="fa-solid fa-code fa-2x"></i>
+              <h3>Software Development</h3>
+            </div>
+            <div class="card-body bg-dark">
+              <h2 class="education-year">Current</h2>
+              <p>Currently studying software development at Code Space Academy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="educatin-column col-lg-4 col-md-6">
+          <div class="card">
+            <div class="card-header bg-secondary">
+              <i class="fa-solid fa-building-columns fa-2x"></i>
+              <h3>Diploma in Systems development</h3>
+            </div>
+            <div class="card-body bg-dark">
+              <h2 class="education-year">2018</h2>
+              <p>NQF Level 6 Diploma in Systems Development obtained at Boston City Campus & Business College.</p>
+            </div>
+          </div>
+        </div>
+        <div class="educatin-column col-lg-4 col-md-12">
+          <div class="card">
+            <div class="card-header bg-secondary">
+              <i class="fa-solid fa-school fa-2x"></i>
+              <h3>Bachelor Pass (Matric NSC)</h3>
+              <h3></h3>
+            </div>
+            <div class="card-body bg-dark">
+              <h2 class="education-year">2015</h2>
+              <p>Bachelor Pass National Senior Certificate obtained at Reašoma Secondary School.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="photography" class="center-aligned">
+      <h2>Photography</h2>
+      <div id="photography-carouel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item  active">
+            <img class="photography-image" src="images/work/photography/Work (1).jpg" alt="dog-profile">
+          </div>
+          <div class="carousel-item ">
+            <img class="photography-image" src="images/work/photography/Work (2).jpg" alt="dog-profile">
+          </div>
+          <div class="carousel-item ">
+            <img class="photography-image" src="images/work/photography/Work (3).jpg" alt="dog-profile">
+          </div>
+          <div class="carousel-item ">
+            <img class="photography-image" src="images/work/photography/Work (4).jpg" alt="dog-profile">
+          </div>
+          <div class="carousel-item ">
+            <img class="photography-image" src="images/work/photography/Work (5).jpg" alt="dog-profile">
+          </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#photography-carouel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#photography-carouel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="videography" class="center-aligned">
+      <h2>Videography</h2>
+      <div id="testimonials-carouel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/llAQyd99uoA" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <div class="carousel-item">
+            <iframe class="youtube-video" src="https://www.youtube.com/embed/0X5O0N9mUek" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonials-carouel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonials-carouel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact-me" class="padding center-aligned grey-background">
+      <h2>Contact Me</h2>
+      <form action="" method="post">
+        <div class="row">
+          <div class="col-md-7 m-auto pt-5">
+            <div class="row g-4">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Full Name" aria-label="full Name">
+              </div>
+              <div class="col">
+                <input type="email" class="form-control" id="" placeholder="Email Address">
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control" placeholder="Subject" aria-label="subject">
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" name="" id="" rows="4" placeholder="Your message goes here..." aria-label="message area"></textarea>
+              </div>
+              <div class="col-12 center-aligned">
+                <button type="submit" class="btn send-message">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="socials" class="center-aligned padding">
+    <h2>Get in touch</h2>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="https://za.linkedin.com/in/relebogile-nkotswe" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+      <li class="list-inline-item"><a href="https://www.instagram.com/babygrandad/?hl=en" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+      <li class="list-inline-item"><a href="https://www.facebook.com/babygrandad" target="_blank"><i class="fa-brands fa-facebook-square fa-2x"></i></a></li>
+      <li class="list-inline-item"><a href="https://twitter.com/babygrandad" target="_blank"><i class="fa-brands fa-twitter-square fa-2x"></i></a></li>
+      <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCI_OK4zLqRxjk6rUM-hw4kw" target="_blank"><i class="fa-brands fa-youtube-square fa-2x"></i></a></li>
+    </ul>
+  </footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
