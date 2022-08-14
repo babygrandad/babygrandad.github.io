@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nekfliks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div id="app" >
+            <nav>
+                <div class="navbar">
+                    <div class="navbar-brand">
+                        <img id='logo' src="/assets/images/nekfliks-logo.png" alt="logo">
+                    </div>
+                    <div class="userStatus">
+                        <h5 class="userNameDisplay" id="userNameDisplay" v-if=" users.loggedIn === true ">Hi {{users.name}}</h5>
+                        <div class="userStateButtons" v-if=" users.loggedIn === true ">
+                            <!-- <button class="userNavButton" id="navlogInButton">Log In</button> -->
+                            <button @click="logoutUser" class="userNavButton" id="navlogOutButton" >Log Out</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="loginPage" class="loginPage" v-if=" users.loggedIn === false ">
+                <div class="formContainer">
+                    <form id="loginForm">
+                        <h2 class="formFunction">Log in</h2>
+                        <p class="formInstructions">Please put in your username and password to continue.</p>
+                        <input class="formInputs formFields" type="text" placeholder="Username" id="inputName">
+                        <input class="formInputs formFields" type="password" placeholder="password" id="inputPassword">
+                        <button type="submit" class="formInputs" @click.prevent="loginUser" id="formLogInButton">Log In</button>
+                    </form>
+                </div>
+            </div>
+            <div class="moviesPage" v-if="users.loggedIn === true">
+                <div class="ComingSoonBanner row-container" v-if="comingSoonMovies.length > 0">
+                    <h1 class="comingSoonText">Movies Coming Soon</h1>
+                    <div id="comingSoon" ref="comingSoon" class="row comingSoon">
+                        <div class="scroller leftScroll" @click="moveLeft('comingSoon')"><i
+                                class="fa-solid fa-chevron-left fa-lg"></i></div>
+                        <div class="scroller rightScroll" @click="moveRight('comingSoon')"><i
+                                class="fa-solid fa-chevron-right fa-lg"></i></div>
+                        <div class="box" v-for="movie in comingSoonMovies" :key="movie.name">
+                            <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                            <div class="movieName">Coming {{ movie.availDate }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="preview" ref="preview" class="preview">
+                    <iframe src="https://www.youtube.com/embed/hl1U0bxTHbY" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="row-Container" v-if="watchList.length > 0">
+                    <h3 class="categoryText">Watchlist movies</h3>
+                    <div id="watchList" ref="watchList" class="row watchlist ">
+                        <div class="scroller leftScroll" @click="moveLeft('watchList')"><i
+                                class="fa-solid fa-chevron-left fa-lg"></i></div>
+                        <div class="scroller rightScroll" @click="moveRight('watchList')"><i
+                                class="fa-solid fa-chevron-right fa-lg"></i></div>
+                        <div class="box" @click="play(movie.preview)" v-for="movie in watchListMovies"
+                            :key="movie.name">
+                            <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                            <div class="movieName">{{ movie.name }}</div>
+                            <!-- <div class="watchlistActions addToList"><i class="fa-solid fa-circle-plus"></i></div> -->
+                            <button class="watchlistActions removeFromList" @click.stop="removeFromWacthList(movie)"><i
+                                    class="fa-solid fa-circle-minus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="allMovies">
+                    <div class="row-Container">
+                        <h3 class="categoryText">Action movies</h3>
+                        <div id="actionMovies" ref="actionMovies" class="row actionMovies">
+                            <div class="scroller leftScroll" @click="moveLeft('actionMovies')"><i
+                                    class="fa-solid fa-chevron-left fa-lg"></i></div>
+                            <div class="scroller rightScroll" @click="moveRight('actionMovies')"><i
+                                    class="fa-solid fa-chevron-right fa-lg"></i></div>
+                            <div class="box"  @click="play(movie.preview)" v-for="movie in actionMovies" :key="movie.id">
+                                <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                                <div class="movieName">{{ movie.name }}</div>
+                                <button class="watchlistActions addToList" ref="doter" @click.stop="addToWacthList(movie)"><i
+                                        class="fa-solid fa-circle-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-Container">
+                        <h3 class="categoryText">Comedy movies</h3>
+                        <div id="comedyMovies" ref="comedyMovies" class="row comedyMovies">
+                            <div class="scroller leftScroll" @click="moveLeft('comedyMovies')"><i
+                                    class="fa-solid fa-chevron-left fa-lg"></i></div>
+                            <div class="scroller rightScroll" @click="moveRight('comedyMovies')"><i
+                                    class="fa-solid fa-chevron-right fa-lg"></i></div>
+                            <div class="box" @click="play(movie.preview)" v-for="movie in comedyMovies">
+                                <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                                <div class="movieName">{{ movie.name }}</div>
+                                <button class="watchlistActions addToList" @click.stop="addToWacthList(movie)"><i
+                                        class="fa-solid fa-circle-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-Container">
+                        <h3 class="categoryText">Animation movies</h3>
+                        <div id="animationMovies" ref="animationMovies" class="row animationMovies">
+                            <div class="scroller leftScroll" @click="moveLeft('animationMovies')"><i
+                                    class="fa-solid fa-chevron-left fa-lg"></i></div>
+                            <div class="scroller rightScroll" @click="moveRight('animationMovies')"><i
+                                    class="fa-solid fa-chevron-right fa-lg"></i></div>
+                            <div class="box" @click="play(movie.preview)" v-for="movie in animationMovies">
+                                <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                                <div class="movieName">{{ movie.name }}</div>
+                                <button class="watchlistActions addToList" @click.stop="addToWacthList(movie)"><i
+                                        class="fa-solid fa-circle-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-Container">
+                        <h3 class="categoryText">Drama movies</h3>
+                        <div id="dramaMovies" ref="dramaMovies" class="row dramaMovies">
+                            <div class="scroller leftScroll" @click="moveLeft('dramaMovies')"><i
+                                    class="fa-solid fa-chevron-left fa-lg"></i></div>
+                            <div class="scroller rightScroll" @click="moveRight('dramaMovies')"><i
+                                    class="fa-solid fa-chevron-right fa-lg"></i></div>
+                            <div class="box" @click="play(movie.preview)" v-for="movie in dramaMovies">
+                                <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                                <div class="movieName">{{ movie.name }}</div>
+                                <button class="watchlistActions addToList" @click.stop="addToWacthList(movie)"><i
+                                        class="fa-solid fa-circle-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-Container">
+                        <h3 class="categoryText">Documentaries</h3>
+                        <div id="documentaries" ref="documentaries" class="row documentaries">
+                            <div class="scroller leftScroll" @click="moveLeft('documentaries')"><i
+                                    class="fa-solid fa-chevron-left fa-lg"></i></div>
+                            <div class="scroller rightScroll" @click="moveRight('documentaries')"><i
+                                    class="fa-solid fa-chevron-right fa-lg"></i></div>
+                            <div class="box" @click="play(movie.preview)" v-for="movie in documentaryMovies">
+                                <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                                <div class="movieName">{{ movie.name }}</div>
+                                <button class="watchlistActions addToList" @click.stop="addToWacthList(movie)"><i
+                                        class="fa-solid fa-circle-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-Container">
+                        <h3 class="categoryText">Horror movies</h3>
+                        <div id="horrorMovies" ref="horrorMovies" class="row horrorMovies">
+                            <div class="scroller leftScroll" @click="moveLeft('horrorMovies')"><i
+                                    class="fa-solid fa-chevron-left fa-lg"></i></div>
+                            <div class="scroller rightScroll" @click="moveRight('horrorMovies')"><i
+                                    class="fa-solid fa-chevron-right fa-lg"></i></div>
+                            <div class="box" @click="play(movie.preview)" v-for="movie in horrorMovies">
+                                <img v-bind:src="movie.posterURL" v-bind:alt="movie.name" class="moviePoster">
+                                <div class="movieName">{{ movie.name }}</div>
+                                <button class="watchlistActions addToList" @click.stop="addToWacthList(movie)"><i
+                                        class="fa-solid fa-circle-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="/js/vue.js" defer></script>
+</body>
+
+</html>
