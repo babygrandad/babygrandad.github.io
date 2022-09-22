@@ -1,0 +1,30 @@
+.input-form{
+
+padding: 10px;
+text-align:left;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.9px);
+-webkit-backdrop-filter: blur(4.9px);
+border: 1px solid rgba(255, 255, 255, 0.67);
+
+}
+
+.input-form label{
+    display: block;
+}
+
+.input-form input{
+    display: block;
+    width: 100%;
+}
+
+.form-separator{
+    margin-bottom: 20px;
+}
+
+.button-separator{
+    margin-top: 40px;
+}
