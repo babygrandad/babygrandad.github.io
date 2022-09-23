@@ -27,6 +27,7 @@ nav a{
 
 nav input[type=button]{
     background-color: var(--accent-color);
+    margin-inline-start: 10px;
 }
 
 nav input[type=button]:hover{
