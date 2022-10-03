@@ -13,7 +13,7 @@ html, body{
 }
 
 .padding{
-    padding: 50px 7%;
+    padding: 50px 3%;
 }
 
 nav img{
@@ -23,6 +23,17 @@ nav img{
 nav a{
     text-decoration: none;
     color: var(--dark-color);
+}
+
+#addBook{
+    background-color: rgb(74, 184, 253);
+    color: var(--light-color) ;
+    margin-inline-start: 10px;
+}
+
+#addBook:hover{
+    background-color: rgba(74, 184, 253, 0.699) !important;
+   
 }
 
 nav input[type=button]{
@@ -46,8 +57,26 @@ nav input[type=button]:hover{
     align-items: center;
 }
 
-.form-containers{
-   
+.searchButtonContainer{
+    margin-bottom: 40px;
+}
+.searchButtonContainer div{
+    margin-bottom: 10px;
+}
+
+.searchButtonContainer input[type=button]{
+    background-color: var(--accent-color);
+    margin-inline-start: 10px;
+}
+
+.searchButtonContainer input[type=button]:hover{
+    background-color: var(--main-color) !important;
+    color: var(--light-color) !important;
+}
+
+.tableContainer{
+    padding:12px;
+    max-width: 100%;
 }
 
 footer{
@@ -58,4 +87,12 @@ footer{
 
 .footer-padding{
     padding-bottom: 10px;
+}
+
+/* media queries  */
+@media only screen and (max-width:615px) {
+    .tableContainer {
+        height: 600px ;
+        overflow-y: scroll ;
+    }
 }
