@@ -1,0 +1,55 @@
+.input-form{
+margin: 50px auto;
+padding: 20px;
+text-align:left;
+color: var(--light-color);
+
+background: rgba( 0, 0, 0, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 17px );
+-webkit-backdrop-filter: blur( 17px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.input-form label{
+    display: block;
+}
+
+.input-form input{
+    display: block;
+    width: 100%;
+}
+
+.input-form span{
+    color: var(--warning-color);
+}
+
+.input-form #forgotPasswordSpan{
+    display: block;
+    text-decoration: underline;
+    text-align: right;
+}
+
+.form-separator{
+    margin-bottom: 20px;
+}
+
+.button-separator{
+    margin-top: 40px;
+}
+
+.input-form input[type=submit]{
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+ .input-form input[type=submit]:hover{
+    background-color: var(--main-color);
+    color: var(--light-color);
+}
+
+.logout-form input[type=submit]{
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}

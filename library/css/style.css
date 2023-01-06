@@ -1,0 +1,111 @@
+@import url("colors.css");
+
+html, body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+/*Global styles*/
+.centering{
+    text-align: center;
+}
+
+.lefting{
+    text-align: left;
+}
+
+.padding{
+    padding: 50px 3%;
+}
+
+nav img{
+    max-width: 120px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+#addBook{
+    background-color: rgb(74, 184, 253);
+    color: var(--light-color) ;
+    margin-inline-start: 10px;
+}
+
+#addBook:hover{
+    background-color: rgba(74, 184, 253, 0.699) !important;
+   
+}
+
+nav input[type=button]{
+    margin-inline-start: 10px;
+}
+
+nav input[type=submit]{
+    background-color: var(--accent-color);
+    margin-inline-start: 10px;
+}
+
+nav input[type=submit]:hover{
+    background-color: var(--main-color) !important;
+    color: var(--light-color) !important;
+}
+
+.form-main{
+    background-color: var(--main-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logs{
+    background-color: var(--main-color);
+    background-image: url("https://picsum.photos/id/20/1920/1080");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.searchButtonContainer{
+    margin-bottom: 40px;
+}
+.searchButtonContainer div{
+    margin-bottom: 10px;
+}
+
+.lookUpFunctions input[type=submit]{
+    background-color: var(--accent-color) ;
+    margin-inline-start: 10px;
+}
+
+.lookUpFunctions input[type=submit]:hover{
+    background-color: var(--main-color) ;
+    color: var(--light-color);
+}
+
+
+.tableContainer{
+    padding:12px;
+    max-width: 100%;
+}
+
+footer{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: small;
+}
+
+.footer-padding{
+    padding-bottom: 10px;
+}
+
+/* media queries  */
+@media only screen and (max-width:615px) {
+    .tableContainer {
+        height: 600px ;
+        overflow-y: scroll ;
+    }
+}
