@@ -53,6 +53,7 @@
     color: #222426;
     padding-left: 3px;
     padding-right: 3px;
+    border-radius: 3px;
 }
 
 .dark-word{
@@ -60,4 +61,5 @@
     background-color: #222426;
     padding-left: 3px;
     padding-right: 3px;
+    border-radius: 3px;
 }
