@@ -1,0 +1,63 @@
+:root {
+    --primary-color: #8A0366;
+    --secondary-color: #0D25D9;
+    --primary-text-forground: #FFF2F7;
+    --secondary-text-forground: #F4F2FF;
+    --normal-text-light:#65696F;
+    --normal-text-dark:#44474B;
+    --dark-background: #222426;
+  }
+
+.main-row{
+    height: 100vh;
+}
+
+.box-display{
+    background-color: var(--primary-color);
+    color: var(--primary-text-forground);
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 5px;
+}
+
+.toggle-button{
+    background-color: #ED26A1;
+    color: var(--primary-text-forground);
+}
+
+.toggle-button:hover{
+    background-color: #580046;
+}
+
+.box-display-dark{
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-forground);
+    box-shadow: rgba(255,255,255,0.6) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
+}
+
+.toggle-button-dark{
+    background-color: #434DEF;
+    color: var(--secondary-text-forground);
+}
+
+.toggle-button-dark:hover{
+    background-color: #001853;
+}
+
+.dark-mode{
+    background-color: var(--dark-background);
+}
+
+.light-word{
+    background-color: #FAFAFC;
+    color: #222426;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.dark-word{
+    color: #FAFAFC;
+    background-color: #222426;
+    padding-left: 3px;
+    padding-right: 3px;
+}
